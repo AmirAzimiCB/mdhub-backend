@@ -11,6 +11,8 @@ const User = new mongoose.Schema({
   dateOfBirth: { type: String },
   address: { type: String },
   country: { type: String },
+  childAccountCreationLink: { type: String },
+  companyName: { type: String },
   city: { type: String },
   region: { type: String },
   postalCode: { type: String },
@@ -19,9 +21,14 @@ const User = new mongoose.Schema({
   accountType: { type: String },
   paymentMode: { type: String },
   loginCode: { type: String },
-  stripeCustomerId: { type: String, required: true },
+  stripeCustomerId: { type: String },
   isAdmin: { type: Boolean, default: false },
-  lastLoggedIn: { type: Date }
+  lastLoggedIn: { type: Date },
+  consultationFeePaid: { type: Boolean },
+  nextPaymentDate: { type: String },
+  billingHistoryAmount: {type: String},
+  lastPaymentDate: {type: String},
+  subscriptionId: { type: String }
 }, 
 { timestamps: true }
 )
